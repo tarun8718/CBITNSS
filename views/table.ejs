@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="1">
+    <link rel="stylesheet" type="text/css" href="table.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Donors Table</h1>
+    <div class="TB">
+        <table>
+            <thead>
+              <tr>
+                <th>Name
+                <th>Mobile Number
+                <th>Blood Group
+                <th>Description
+            </thead>
+            <tbody >
+                <% for(var i=0; i < data.length; i++) { %>
+                   <tr>
+                     <td><%= data[i].name%>
+                     <td><%= data[i].phno %>
+                     <td><%= data[i].bloodgroup %>
+                     <td><%= data[i].desc %>
+                <% } %>
+            <!--  <tr>
+                <td>Malcolm
+                <td>Reynolds
+                <td>Mal, Cap'n
+              <tr>
+                <td>Zoe
+                <td>Washburn
+                <td>Zoe
+              <tr class="disabled">
+                <td>Hoban
+                <td>Washburn
+                <td>Wash
+              <tr>
+                <td>Kaylee
+                <td>Frye
+                <td>Kaylee
+              <tr>
+                <td>Jayne
+                <td>Cobb
+                <td>Jayne
+              <tr class="disabled">
+                <td>
+                <td>Book
+                <td>Shepherd
+              <tr>
+                <td>Simon
+                <td>Tam
+                <td>Simon
+              <tr>
+                <td>River
+                <td>Tam
+                <td>River -->
+            </tbody>
+          </table>
+    </div>
+    <div class="bt">
+        <a href="/create"><button class="button"> Create an entry</button></a>
+    </div>
+</body>
+</html>
