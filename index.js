@@ -5,9 +5,9 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 var session = require("express-session");
 var MongoStore = require("connect-mongo");
-const MONGOURI = require("./keys");
+//const MONGOURI = require("./keys");
 
-mongoose.connect(MONGOURI, {
+mongoose.connect(process.env.MONGOURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(
@@ -25,7 +25,7 @@ mongoose.connect(MONGOURI, {
               resave: true,
               saveUninitialized: false,
               store: MongoStore.create({
-                mongoUrl: MONGOURI,
+                mongoUrl: process.env.MONGOURI,
               }),
             })
           );
